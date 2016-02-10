@@ -38,7 +38,7 @@ if(page.archive) {
                     <% } %>
 
                     <p class="say-title">
-                        —— <img src="<%- theme.avatar %>" class="img-circle index-post-avatar" />
+                         <img src="<%- theme.avatar %>" class="img-circle index-post-avatar" />
                         <a href="<%- config.url %>" target="_blank" title="<%- config.author %>"><%- config.author %></a>
                         <%- item.date.format(config.date_format) %><% if(item.tags && item.tags.length){ %>with <%- list_tags(item.tags, { show_count: false, class: 'article-tag', style: ""}) %> <% } %>
                     </p>
