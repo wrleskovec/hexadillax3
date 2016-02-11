@@ -1,10 +1,12 @@
-    <footer id="footer">
-    <div id="bottom-tip">
-        <%= config.title %><% if(config.subtitle) { %>  <small><%= config.subtitle %></small><% } %>
+    <div id='stationaryfooter'>
+      <footer id="footer">
+      <div id="bottom-tip">
+          <%= config.title %><% if(config.subtitle) { %>  <small><%= config.subtitle %></small><% } %>
+      </div>
+          <small>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, Using <a href="https://github.com/wrleskovec/hexadillax3" target="_blank">Hexadillax</a> theme</small><br />
+          <small>&copy; 2016 <%= config.author %></small>
+      </footer>
     </div>
-        <small>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, Using <a href="https://github.com/wrleskovec/hexadillax3" target="_blank">Hexadillax</a> theme</small><br />
-        <small>&copy; 2016 <%= config.author %></small>
-    </footer>
 
     <%- partial('google-analytics') %>
 </body>
