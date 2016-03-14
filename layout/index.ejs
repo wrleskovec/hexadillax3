@@ -5,10 +5,14 @@
 
         <% if(item.description){ %>
             <p><%- item.description %></p>
-        <% } else if(item.excerpt){ %>
-            <p><%= strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
-        <% } else {%>
-            <p><%= strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140) %></p>
+        <% } else if(item.excerpt){
+              var untrimmed = strip_html(item.excerpt).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140);
+              %>
+            <p><%= untrimmed.substring(0, Math.min(untrimmed.length, untrimmed.lastIndexOf(" "))) %></p>
+        <% } else {
+              var untrimmed = strip_html(item.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 140);
+              %>
+            <p><%= untrimmed.substring(0, Math.min(untrimmed.length, untrimmed.lastIndexOf(" "))) %></p>
         <% } %>
 
         <p class="say-title">
